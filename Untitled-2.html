@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>김강산 & 박주연 결혼합니다</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&family=Noto+Serif+KR:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        /* 초기화 및 기본 설정 */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background-color: #f9f9f9; /* 전체 배경: 아주 연한 회색 */
+            font-family: 'Noto Sans KR', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* 모바일 화면 컨테이너 (스마트폰 크기 제한) */
+        .container {
+            width: 100%;
+            max-width: 480px; /* 모바일 너비 제한 */
+            background-color: #ffffff; /* 본문 배경: 흰색 */
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+            padding-bottom: 50px;
+        }
+
+        /* 섹션 공통 스타일 */
+        section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        /* 1. 메인 타이틀 영역 */
+        .header {
+            padding-top: 60px;
+            padding-bottom: 40px;
+        }
+        .date-text {
+            color: #E89F9F; /* 파스텔 핑크 */
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        .names {
+            font-family: 'Noto Serif KR', serif;
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            color: #2c2c2c;
+        }
+        .names span {
+            font-size: 18px;
+            color: #888;
+            font-weight: 300;
+            margin: 0 5px;
+        }
+
+        /* 메인 사진 스타일 */
+        .main-photo-frame {
+            width: 100%;
+            height: auto;
+            border-radius: 100px 100px 0 0; /* 윗부분 둥글게 (아치형) */
+            overflow: hidden;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .main-photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* 2. 초대 문구 영역 */
+        .invitation {
+            background-color: #FDFBF7; /* 아주 연한 파스텔 베이지 */
+        }
+        .invitation-title {
+            font-family: 'Noto Serif KR', serif;
+            color: #E89F9F;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .invitation p {
+            font-size: 15px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        /* 3. 갤러리 (사진 2, 3) */
+        .gallery {
+            background-color: #fff;
+        }
+        .gallery-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .gallery-img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        /* 4. 장소 및 일시 정보 */
+        .info {
+            background-color: #fff;
+            border-top: 1px dashed #eee;
+        }
+        .info-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #444;
+        }
+        .info-details {
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+        .info-details strong {
+            display: block;
+            font-size: 20px;
+            color: #E89F9F;
+            margin-bottom: 5px;
+        }
+        .map-area {
+            background-color: #eee;
+            height: 200px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: #777;
+            font-size: 14px;
+            overflow: hidden;
+        }
+        
+        /* 버튼 스타일 */
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #E89F9F; /* 파스텔 핑크 */
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 15px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background-color: #d68f8f;
+        }
+
+        /* 푸터 */
+        footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 12px;
+            color: #aaa;
+            background-color: #f9f9f9;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <section class="header">
+            <p class="date-text">2026. 03. 14 / SATURDAY</p>
+            <h1 class="names">
+                김강산 <span>&</span> 박주연
+            </h1>
+            
+            <div class="main-photo-frame">
+                <img src="3.jpg" onerror="this.src='https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?q=80&w=1000&auto=format&fit=crop'" alt="메인 웨딩 사진">
+            </div>
+            
+            <p style="font-size: 16px; color: #666;">저희 두 사람, 사랑으로 하나 되는 날<br>소중한 분들을 모십니다.</p>
+        </section>
+
+        <section class="invitation">
+            <h2 class="invitation-title">초대합니다</h2>
+            <p>서로가 서로의 쉼터가 되어</p>
+            <p>같은 곳을 바라보며 걷겠습니다.</p>
+            <p>저희의 시작을 축복해 주시면</p>
+            <p>더없는 기쁨으로 간직하겠습니다.</p>
+            <br>
+            <p><strong>김강산 · 박주연</strong> 드림</p>
+        </section>
+
+        <section class="gallery">
+            <h3 style="margin-bottom: 20px; font-weight: 400; color:#888;">GALLERY</h3>
+            <div class="gallery-grid">
+                <img src="1.jpg" onerror="this.src='https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1000&auto=format&fit=crop'" class="gallery-img" alt="웨딩사진 2">
+                <img src="6.jpg" onerror="this.src='https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1000&auto=format&fit=crop'" class="gallery-img" alt="웨딩사진 6">
+                <img src="2.jpg" onerror="this.src='https://images.unsplash.com/photo-1520854221256-17451cc330e7?q=80&w=1000&auto=format&fit=crop'" class="gallery-img" alt="웨딩사진 3">
+                <img src="4.jpg" onerror="this.src='https://images.unsplash.com/photo-1520854221256-17451cc330e7?q=80&w=1000&auto=format&fit=crop'" class="gallery-img" alt="웨딩사진 4">
+                
+                <img src="7.jpg" onerror="this.src='https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1000&auto=format&fit=crop'" class="gallery-img" alt="웨딩사진 7">
+            </div>
+        </section>
+
+        <section class="info">
+            <div class="info-title">부부 되는 날</div>
+            <div class="info-details">
+                2026년 3월 14일 토요일<br>
+                <strong>오후 4시</strong>
+                <div class="info-title">오시는 길</div>
+                <br>
+                <span style="font-size: 18px; font-weight: bold; color: #333;">제이오스티엘</span>
+            </div>
+
+            <div class="map-area">
+                <img src="map.jpg" style="width:100%; height:100%; object-fit:cover;" alt="오시는 길 약도">
+            </div>
+            
+            <a href="https://map.naver.com/p/search/%EC%A0%9C%EC%9D%B4%EC%98%A4%EC%8A%A4%ED%8B%B0%EC%97%98/place/13358566?placePath=/home?entry=pll&from=map&fromNxList=true&fromPanelNum=2&timestamp=202512091458&locale=ko&svcName=map_pcv5&searchText=%EC%A0%9C%EC%9D%B4%EC%98%A4%EC%8A%A4%ED%8B%B0%EC%97%98&searchType=place&c=15.00,0,0,0,dh" target="_blank" class="btn">네이버 지도 보기</a>
+        </section>
+
+        <footer>
+            Copyright © 2026 kangsan & Juyeon<br>All rights reserved.
+        </footer>
+
+    </div>
+</body>
+</html>
