@@ -28,16 +28,11 @@
             object-fit: fill;
             background-color: #ddd;
         }
-        .video-background video {
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            object-fit: cover;
+      .video-background video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* 꽉 채우기 */
+            object-position: center bottom; /* 영상의 '아래쪽'을 우선으로 보여줌 */
         }
 
         /* [본문 컨테이너] - 투명도 0.75 적용 */
@@ -279,3 +274,4 @@
 </body>
 
 </html>
+
