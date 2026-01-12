@@ -6,45 +6,44 @@
     <title>김강산 & 박주연 결혼합니다</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&family=Noto+Serif+KR:wght@300;600&display=swap" rel="stylesheet">
     <style>
+
+        
+.gallery-img {
+    opacity: 0;
+    transform: translateY(40px); /* 이동 거리도 살짝 늘리면 더 극적입니다 */
+    transition: all 1.5s ease-out; /* 1.5초 동안 천천히 실행 */
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* 스크롤 시 나타날 클래스 */
+.gallery-img.reveal {
+    opacity: 1;
+    transform: translateY(0);
+}
+
         /* 초기화 및 기본 설정 */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
-        body {
-            background-color: transparent;
-            font-family: 'Noto Sans KR', sans-serif;
-            color: #333;
-            line-height: 1.6;
-            display: flex;
-            justify-content: center;
-        }
+       body {
+    /* 기존: background-color: transparent; */
+    background-color: #f1e1ee; /* 원하는 색상 코드로 변경 */
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #0d000f;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+}
 
-        /* [배경 동영상] */
-        .video-background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            overflow: hidden;
-            background-color: #ddd;
-        }
-       .video-background video {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            object-fit: fill; /* 비율 무시하고 꽉 채우기 */
-        }
 
         /* [본문 컨테이너] - 투명도 0.75 적용 */
         .container {
             width: 100%;
             max-width: 480px;
-            /* 배경 투명도 조절 (0.75 = 75% 불투명) */
-            background-color: rgba(255, 255, 255, 0.30);
-            box-shadow: 0 0 30px rgba(0,0,0,0.1);
+            /* 배경 투명도 조절 (0.30 = 75% 불투명) */
+            background-color: rgba(248, 247, 247, 0.30);
+            box-shadow: 0 0 30px rgba(0,0,0,0.30);
             padding-bottom: 50px;
             position: relative;
         }
@@ -86,7 +85,7 @@
         .names span { font-size: 18px; color: #888; font-weight: 300; margin: 0 5px; }
         
         .main-photo-frame {
-            width: 100%; height: auto; border-radius: 100px 100px 0 0;
+            width: 100%; height: auto; border-radius: 100px 100px 100px 100px;
             overflow: hidden; margin-bottom: 30px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1); background-color: #fff;
         }
@@ -130,11 +129,6 @@
         🎵
     </div>
 
-    <div class="video-background">
-        <video autoplay muted loop playsinline>
-            <source src="bg-video.mp4" type="video/mp4">
-        </video>
-    </div>
 
     <div class="container">
         
@@ -142,7 +136,7 @@
             <p class="date-text">2026. 03. 14 / SATURDAY</p>
             <h1 class="names">김강산 <span>&</span> 박주연</h1>
             <div class="main-photo-frame">
-                <img src="3.jpg" onerror="this.src='https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?q=80&w=1000&auto=format&fit=crop'" alt="메인 웨딩 사진">
+                <img src="3.jpg" >
             </div>
             <p style="font-size: 16px; color: #666;">저희 두 사람, 사랑으로 하나 되는 날<br>소중한 분들을 모십니다.</p>
         </section>
@@ -161,13 +155,14 @@
             <h3 style="margin-bottom: 20px; font-weight: 400; color:#888;">GALLERY</h3>
             <div class="gallery-grid">
                 <img src="1.jpg" onerror="this.src='https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1000&auto=format&fit=crop'" class="gallery-img" alt="웨딩사진 1">
-                <img src="6.jpg" onerror="this.src='https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1000&auto=format&fit=crop'" class="gallery-img" alt="웨딩사진 6">
-                <img src="2.jpg" onerror="this.src='https://images.unsplash.com/photo-1520854221256-17451cc330e7?q=80&w=1000&auto=format&fit=crop'" class="gallery-img" alt="웨딩사진 2">
-                <img src="5.jpg" onerror="this.src='https://images.unsplash.com/photo-1520854221256-17451cc330e7?q=80&w=1000&auto=format&fit=crop'" class="gallery-img" alt="웨딩사진 4">
+                <img src="5.jpg" onerror="this.src='https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1000&auto=format&fit=crop'" class="gallery-img" alt="웨딩사진 6">
+                <img src="8.jpg" onerror="this.src='https://images.unsplash.com/photo-1520854221256-17451cc330e7?q=80&w=1000&auto=format&fit=crop'" class="gallery-img" alt="웨딩사진 2">
+                <img src="2.jpg" onerror="this.src='https://images.unsplash.com/photo-1520854221256-17451cc330e7?q=80&w=1000&auto=format&fit=crop'" class="gallery-img" alt="웨딩사진 4">
+                 <img src="6.jpg" onerror="this.src='https://images.unsplash.com/photo-1520854221256-17451cc330e7?q=80&w=1000&auto=format&fit=crop'" class="gallery-img" alt="웨딩사진 5">
             </div>
         </section>
 <section class="header">
-            <p class="date-text">2026. 03. 14 / SATURDAY</p>
+            <p class="date-text">2026. 03. 14 PM: 16:00/ SATURDAY</p>
             
             <div id="d-day-tag" style="background-color:#E89F9F; color:white; padding:5px 15px; border-radius:15px; font-size:14px; display:inline-block; margin-bottom:15px; font-weight:bold; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
                 </div>
@@ -183,10 +178,14 @@
                 <div class="info-title" style="margin-bottom:10px;">오시는 길</div>
                 <span style="font-size: 18px; font-weight: bold; color: #333;">제이오스티엘</span>
             </div>
+            <p style="font-size: 15px; color: #333; margin-top: 5px; margin-bottom: 15px;">
+            서울특별시 구로구 경인로 565 (구로동 604-19)<br>
+            <span style="font-size: 15px; color: #333;">단독홀 2층</span>
+        </p>
             <div class="map-area">
                 <img src="map.jpg" style="width:100%; height:100%; object-fit:cover;" alt="오시는 길 약도">
             </div>
-            <a href="https://map.naver.com/p/search/%EC%A0%9C%EC%9D%B4%EC%98%A4%EC%8A%A4%ED%8B%B0%EC%97%98/place/13358566?placePath=/home?entry=pll&from=map&fromNxList=true&fromPanelNum=2&timestamp=202512091458&locale=ko&svcName=map_pcv5&searchText=%EC%A0%9C%EC%9D%B4%EC%98%A4%EC%8A%A4%ED%8B%B0%EC%97%98&searchType=place&c=15.00,0,0,0,dh" target="_blank" class="btn">네이버 지도 보기</a>
+            <a href="https://map.naver.com/p/entry/place/13358566?lng=126.8797661&lat=37.5037642&placePath=%2F&entry=pll&searchType=place&c=15.00,0,0,0,dh" target="_blank" class="btn">네이버 지도 보기</a>
         </section>
 
         <section class="account-section">
@@ -199,9 +198,9 @@
                 <div class="account-box">
                     <div style="text-align: left;">
                         <span style="font-size:12px; color:#888;">신랑 김강산</span><br>
-                        <strong>은행</strong> 123-456-78-901234
+                        <strong>신한은행</strong> 110-450-926667
                     </div>
-                    <button class="copy-btn" onclick="copy('123-456-78-901234')">복사</button>
+                    <button class="copy-btn" onclick="copy('110-450-926667')">복사</button>
                 </div>
             </div>
             <button class="accordion">신부측 마음 전하실 곳 <span style="font-size:12px">▼</span></button>
@@ -209,9 +208,9 @@
                 <div class="account-box">
                     <div style="text-align: left;">
                         <span style="font-size:12px; color:#888;">신부 박주연</span><br>
-                        <strong>은행</strong> 123456789
+                        <strong>농협은행</strong> 356-1260-9173-53
                     </div>
-                    <button class="copy-btn" onclick="copy('123456789')">복사</button>
+                    <button class="copy-btn" onclick="copy('356-1260-9173-53')">복사</button>
                 </div>
             </div>
         </section>
@@ -306,6 +305,27 @@
                 tag.innerHTML = "결혼식까지 " + days + "일 " + hours + "시간 " + minutes + "분 " + seconds + "초";
             }
         }, 1000); // 1초마다 갱신
+
+document.addEventListener("DOMContentLoaded", function() {
+    const observerOptions = {
+        threshold: 0.1 // 이미지가 10%만 보여도 작동 시작
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                // 화면에 들어왔을 때 나타남
+                entry.target.classList.add('reveal');
+            } else {
+                // 화면에서 나갔을 때 다시 숨김 (불투명해짐)
+                entry.target.classList.remove('reveal');
+            }
+        });
+    }, observerOptions);
+
+    const images = document.querySelectorAll('.gallery-img');
+    images.forEach((img) => observer.observe(img));
+});
     </script>
 </body>
 </html>
